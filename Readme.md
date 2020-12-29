@@ -1,6 +1,6 @@
-# Asp.Net Core:  this is an asp.net core API app for the autoship feature - POC
+# Asp.Net Core:  this is an asp.net core API app for an autoship feature (POC)
 
 
 ## OverView
-This repo is used to support the Autoship and subscription-payments workflows. 
-Consumers are Salesforce CRM and the automated IVR System.
+This repo is used to support auto-ship and subscription-payments workflows. 
+The clients/consumers are Salesforce-crm and an automated IVR System.

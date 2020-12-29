@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AutoShipServicePOS.Controllers
 {
+    // this is the default template, use for testing api and confirm it's wired up.
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase

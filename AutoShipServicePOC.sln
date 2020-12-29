@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoShipServicePOC", "AutoShipServicePOC\AutoShipServicePOC.csproj", "{FA471D4E-5D7A-4565-A49F-DB8875EE9A74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoShipServicePOC", "AutoShipServicePOC.csproj", "{FA471D4E-5D7A-4565-A49F-DB8875EE9A74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

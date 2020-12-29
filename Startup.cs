@@ -29,7 +29,7 @@ namespace AutoShipServicePOC
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             //services.AddDbContext<SubscriptionContext>(options =>
-            //       options.UseSqlServer("Data Source=A87907-CTS-L;initial catalog=mySandbox;integrated security=True;MultipleActiveResultSets=True;"));
+            //       options.UseSqlServer("Data Source={serverName};initial catalog={DbName};integrated security=True;MultipleActiveResultSets=True;"));
 
             services.AddDbContext<SubscriptionContext>(options =>
                     options.UseSqlServer("Server = tcp:sfdbsvr07.database.windows.net, 1433; Initial Catalog = sfAzureDb01; Persist Security Info = False; User ID = sfDBsvr07Admin; Password = sV3nskenRule2; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;"));
