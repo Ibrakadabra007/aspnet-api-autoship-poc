@@ -28,7 +28,7 @@ namespace AutoShipServicePOC.Controllers
             return _context.Subscription;
         }
 
-        // GET: api/Subscriptions/5
+        // GET: api/Subscriptions/1797B430-1B4A-EB11-98A2-74F06DB18F99
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSubscription([FromRoute] Guid id)
         {

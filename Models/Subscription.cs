@@ -13,7 +13,7 @@ namespace AutoShipServicePOC.Models
         [Column("ExternalClientID")]
         public Guid ExternalClientId { get; set; }
         [Column("TokenInfoID")]
-        public Guid TokenInfoId { get; set; }
+        public Guid? TokenInfoId { get; set; }
         [Required]
         [Column("OrderID")]
         [StringLength(256)]
