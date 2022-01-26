@@ -2,5 +2,5 @@
 
 
 ## OverView
-This repo is used to support auto-ship and subscription-payments workflows. 
+This repo is used to support ```auto-ship``` and subscription-based recurring payments ```workflows```. 
 The clients/consumers are Salesforce-crm and an automated IVR System.
