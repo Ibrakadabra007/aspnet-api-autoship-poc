@@ -1,4 +1,4 @@
-# Asp.Net Core:  this is an asp.net core API app for an autoship feature (POC)
+# Asp.Net Core:  this is an asp.net core API app for an autoship feature, no View
 
 
 ## OverView
