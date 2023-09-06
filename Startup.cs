@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
@@ -26,14 +26,23 @@ namespace AutoShipServicePOC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //services.Configure<MvcOptions>(options =>
+            //{
+            //    options.EnableEndpointRouting = false;
+            //});
+
+            services.AddControllers();
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            //services.AddControllers();
 
             services.AddDbContext<SubscriptionContext>(options =>
-                  options.UseSqlServer(Configuration.GetConnectionString("myConnectionString")));
+                  options.UseSqlite(Configuration.GetConnectionString("mySqlLiteConnectionString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        //public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -45,7 +54,18 @@ namespace AutoShipServicePOC
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Subscriptions}/{action=Index}/{Id?}");
+            //});
+
+            app.UseRouting();
+            app.UseEndpoints(endpts =>
+            {
+                endpts.MapControllers();
+            }); 
         }
     }
 }

@@ -15,7 +15,7 @@ namespace AutoShipServicePOS.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "Zlatan", "Messi", "Ronaldo" };
+            return new string[] { "Zlatan", "Messi", "Ronaldo - The RealOne", "Leao"};
         }
 
         // GET api/values/5
