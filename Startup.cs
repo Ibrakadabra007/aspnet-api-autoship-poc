@@ -32,9 +32,9 @@ namespace AutoShipServicePOC
             //    options.EnableEndpointRouting = false;
             //});
 
-            services.AddControllers();
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-            //services.AddControllers();
+            services.AddMvcCore();
+            services.AddControllers();
 
             services.AddDbContext<SubscriptionContext>(options =>
                   options.UseSqlite(Configuration.GetConnectionString("mySqlLiteConnectionString")));

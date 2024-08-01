@@ -25,7 +25,14 @@ namespace AutoShipServicePOC.Controllers
         [HttpGet]
         public IEnumerable<Subscription> GetSubscription()
         {
-            return _context.Subscription;
+            try
+            {
+                return _context.Subscription;
+            }
+            catch (Exception)
+            {
+                return Enumerable.Empty<Subscription>();
+            }
         }
 
         // GET: api/Subscriptions/1797B430-1B4A-EB11-98A2-74F06DB18F99

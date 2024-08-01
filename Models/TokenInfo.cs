@@ -5,6 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AutoShipServicePOC.Models
 {
+
+    /// <summary>
+    ///  TODO - add to EF DbSet<TokenInfo>
+    /// </summary>
     public class TokenInfo
     {
         [Key]
@@ -31,15 +35,23 @@ namespace AutoShipServicePOC.Models
 
         [Column(TypeName = "datetimeoffset(3)")]
         public DateTimeOffset CardOnFileDate { get; set; }
+
         [Column(TypeName = "datetimeoffset(3)")]
         public DateTimeOffset TokenCaptureDate { get; set; }
 
-        [Column("CreateApplicationID")]
-        public short CreateApplicationId { get; set; }
-        [Column("ChangeApplicationID")]
-        public short ChangeApplicationId { get; set; }
+        [Column(TypeName = "bigint")]
+        public int CreatedApplicationId { get; set; }
 
-        //public DateTimeOffset CreateDate { get; set; }
-        //public DateTimeOffset ChangeDate { get; set; }
+        [Column(TypeName = "bigint")]
+        public int ChangedApplicationId { get; set; }
+
+        [Required]
+        [Column(TypeName = "datetimeoffset(3)")]
+        public DateTimeOffset CreatedDate { get; set; }
+
+        [Required]
+        [Column(TypeName = "datetimeoffset(3)")]
+        public DateTimeOffset ChangedDate { get; set; }
+
     }
 }
